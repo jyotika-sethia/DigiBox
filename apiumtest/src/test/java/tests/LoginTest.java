@@ -15,16 +15,17 @@ public class LoginTest extends BaseClass{
 	}
 	
 	@Test
-	public void login() {
+	public void login() throws InterruptedException {
 		
+		login.loginDetail("intern6", "testing2510935@gmail.com", "Gaurav@123");
 //		login.allowEntry();
-		login.clickNext1();
-		login.clickNext2();
-		login.clickStart();
-		login.enterDigiSpace();
-		login.enterEmail();
-		login.enterPassword();
-		login.clickLogin();
+//		login.clickNext1();
+//		login.clickNext2();
+//		login.clickStart();
+//		login.enterDigiSpace();
+//		login.enterEmail();
+//		login.enterPassword();
+//		login.clickLogin();
 		
 	}
 	

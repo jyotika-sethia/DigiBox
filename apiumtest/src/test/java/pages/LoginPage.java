@@ -1,7 +1,11 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumDriver;
@@ -15,83 +19,46 @@ public class LoginPage  {
 	public LoginPage(AppiumDriver driver) 
 	{
 		this.driver=driver;
-	}
-
-
-	
-	
-
-
-
-
-//	public void allowEntry()
-//	{
-//		
-//		WebElement allow = driver.findElement(By.xpath("	\r\n"
-//				+ "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button[2]"));
-//		allow.click();
-//	}
-	
-	
-	public void clickNext1()
-	{
-		
-//		WebElement next1 = driver.findElement(By.id("btnNextIntroOne"));
-		WebElement next1 = driver.findElement(By.id("com.liqvd.digibox.test:id/btnNextIntroOne"));
-		next1.click();
-		
+		PageFactory.initElements( driver, this);
 	}
 	
-	public void clickNext2()
-	{
-		
-//		WebElement next2 = driver.findElement(By.id("btnNextIntroOne"));
-		WebElement next2 = driver.findElement(By.id("com.liqvd.digibox.test:id/btnNextIntroOne"));
-		next2.click();
-	}
+	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/btnNextIntroOne")
+	WebElement clicknext1;	 	
 
-	public void clickStart()
+	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/btnNextIntroOne")
+	WebElement clicknext2;
+	
+	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/btnNextIntroOne")
+	WebElement start;
+	
+	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/edtDigiSpaceName")
+	WebElement digi;
+	
+	@FindBy(how=How.ID,using="edtEmail")
+	WebElement email;
+	
+	@FindBy(how=How.ID,using="edtPassword")
+	WebElement password;
+	
+	@FindBy(how=How.ID,using="btnSignIn")
+	WebElement login;
+
+
+	public void loginDetail(String arg1,String arg2,String arg3) throws InterruptedException
 	{
-		
-//		WebElement getStart = driver.findElement(By.id("btnNextIntroOne"));
-		WebElement start = driver.findElement(By.id("com.liqvd.digibox.test:id/btnNextIntroOne"));
+		System.out.println("1");
+		clicknext1.click();
+		System.out.println("2");
+		Thread.sleep(3000);
+		clicknext2.click();
+		Thread.sleep(3000);
 		start.click();
-	}
-	
-	public void enterDigiSpace()
-	{
-		
-//		WebElement digispace = driver.findElement(By.id("edtDigiSpaceName"));
-		WebElement digispace = driver.findElement(By.id("com.liqvd.digibox.test:id/edtDigiSpaceName"));
-		digispace.sendKeys("intern6");
-	}
-	
-	public void enterEmail()
-	{
-		
-		WebElement userid = driver.findElement(By.id("edtEmail"));
-		userid.sendKeys("testing2510935@gmail.com");
-	}
-	
-	public void enterPassword()
-	{
-		WebElement password = driver.findElement(By.id("edtPassword"));
-		password.sendKeys("Gaurav@123");
-	}
-	
-	public void clickLogin()
-	{
-		
-		WebElement login = driver.findElement(By.id("btnSignIn"));
+		Thread.sleep(3000);
+		digi.sendKeys(arg1);
+		email.sendKeys(arg2);
+		password.sendKeys(arg3);
 		login.click();
-	}
-	
-	public void loginDetail()
-	{
-		clickNext1();
-		clickNext2();
-		clickStart();
-		
+
 	}
 	
 	

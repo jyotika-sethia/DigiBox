@@ -22,20 +22,9 @@ public class CreateFrolderTest extends BaseClass {
 	@Test
 	public void folder() throws InterruptedException
 	{
-		lp.clickNext1();
-		lp.clickNext2();
-		lp.clickStart();
-		lp.enterDigiSpace();
-		lp.enterEmail();
-		lp.enterPassword();
-		lp.clickLogin();
+		lp.loginDetail("intern6", "testing2510935@gmail.com", "Gaurav@123");
 		Thread.sleep(4000);
-		cp.addButton();
-		cp.selectFolder();
-		Thread.sleep(2000);
-		cp.folderName();
-		Thread.sleep(2000);
-		cp.createFolder();
+		cp.CFolder("photos");
 	}
 	
 }

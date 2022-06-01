@@ -22,18 +22,8 @@ public class UploadImageTest extends BaseClass{
 	@Test
 	public void uploadImages() throws InterruptedException
 	{
-		lp.clickNext1();
-		lp.clickNext2();
-		lp.clickStart();
-		lp.enterDigiSpace();
-		lp.enterEmail();
-		lp.enterPassword();
-		lp.clickLogin();
+		lp.loginDetail("intern6", "testing2510935@gmail.com", "Gaurav@123");
 		Thread.sleep(4000);
-		image.addButton();
-		Thread.sleep(2000);
-		image.uploadFile();
-		Thread.sleep(2000);
 		image.selectImage();
 		
 	}

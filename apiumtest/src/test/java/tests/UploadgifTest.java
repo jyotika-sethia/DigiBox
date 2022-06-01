@@ -22,19 +22,9 @@ public class UploadgifTest extends BaseClass {
 	@Test
 	public void uploadgif() throws InterruptedException
 	{
-		lp.clickNext1();
-		lp.clickNext2();
-		lp.clickStart();
-		lp.enterDigiSpace();
-		lp.enterEmail();
-		lp.enterPassword();
-		lp.clickLogin();
+		lp.loginDetail("intern6", "testing2510935@gmail.com", "Gaurav@123");
 		Thread.sleep(4000);
-		ugp.addButton();
-		Thread.sleep(2000);
-		ugp.uploadFile();
-		Thread.sleep(2000);
-		ugp.gifimage();
+		ugp.upGif();
 		
 	}
 

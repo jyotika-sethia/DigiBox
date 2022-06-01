@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.UploadpdfTest">
+      <class name="tests.FoldercolorTest">
         <methods>
-          <include name="call"/>
           <include name="teardown"/>
-          <include name="pdfUpload"/>
           <include name="setup"/>
+          <include name="call"/>
+          <include name="setFColor"/>
         </methods>
-      </class> <!-- tests.UploadpdfTest -->
+      </class> <!-- tests.FoldercolorTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

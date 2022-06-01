@@ -19,7 +19,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class BaseClass {
 
 	
-	 AppiumDriver driver;
+	 public AppiumDriver driver;
 
 	 
 	@BeforeTest

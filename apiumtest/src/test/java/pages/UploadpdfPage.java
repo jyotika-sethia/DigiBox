@@ -2,6 +2,9 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.AppiumDriver;
 
@@ -11,27 +14,25 @@ public class UploadpdfPage {
 	public UploadpdfPage(AppiumDriver driver)
 	{
 		this.driver=driver;
+		PageFactory.initElements(driver, this);
 	}
 
+	@FindBy(how=How.XPATH,using="//android.widget.FrameLayout[@content-desc=\"Add\"]/android.widget.FrameLayout/android.widget.ImageView")
+	WebElement add;
 	
-	public void addButton()
+	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/llUploadFileFolders")
+	WebElement upFile;
+	
+	@FindBy(how=How.XPATH,using ="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.LinearLayout")
+	WebElement upPdf;		
+	
+	public void UploadPdf() throws InterruptedException
 	{
-	WebElement add = driver.findElement(By.xpath("//android.widget.FrameLayout[@content-desc=\"Add\"]"));
-	add.click();
-	}
-	
-	
-	public void uploadFile()
-	{
-
-	WebElement upFile = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout[1]/android.widget.TextView"));
+		Thread.sleep(2000);
+		add.click();
+		Thread.sleep(2000);
 		upFile.click();
-	}
-	
-	
-	public void selectpdf()
-	{
-		WebElement pdf = driver.findElement(By.id("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView"));
-		pdf.click();
+		Thread.sleep(2000);
+		upPdf.click();
 	}
 }
