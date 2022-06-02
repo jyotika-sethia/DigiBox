@@ -46,9 +46,9 @@ public class LoginPage  {
 
 	public void loginDetail(String arg1,String arg2,String arg3) throws InterruptedException
 	{
-		System.out.println("1");
-		clicknext1.click();
 		System.out.println("2");
+		clicknext1.click();
+		System.out.println("3");
 		Thread.sleep(3000);
 		clicknext2.click();
 		Thread.sleep(3000);
