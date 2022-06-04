@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.RestorefRecycleTest">
+      <class name="tests.DeletePPTest">
         <methods>
           <include name="teardown"/>
+          <include name="set"/>
           <include name="setup"/>
-          <include name="deleteFromRecycle"/>
-          <include name="call"/>
+          <include name="set_ProfileImage"/>
         </methods>
-      </class> <!-- tests.RestorefRecycleTest -->
+      </class> <!-- tests.DeletePPTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
